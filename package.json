@@ -1,0 +1,27 @@
+{
+   "name": "sendgrid-voicerelay",
+   "description": "SendGrid Text-To-Speech Sample",
+   "version": "0.0.1",
+   "private": true,
+   "dependencies": {
+      "express": "3.4.3",
+      "firebase": "0.6.3",
+      "unirest": "0.0.4"
+   },
+   "subdomain": "sendgrid.voicerelay",
+   "scripts": {
+      "start": "app.js"
+   },
+   "engines": {
+      "node": "0.8.x"
+   },
+   "bundledDependencies": [
+      "express",
+      "firebase",
+      "unirest"
+   ],
+   "env": {
+      "npm_config_rebuild_bundle": false,
+      "npm_config_production": true
+   }
+}
