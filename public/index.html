@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>Play mp3</title>
+      <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+      <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+   </head>
+
+<body>
+   <script>
+      $(document).ready(function () {
+         var audio = document.createElement("audio");
+         if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg")) {
+            audio.src = "response.mp3";
+         }
+
+         var myDataRef = new Firebase('https://voice.firebaseio.com/');
+         myDataRef.on('child_added', function(snapshot) {
+            audio.src = "response.mp3";
+            audio.play(); 
+            $("#subject").text(snapshot.val().subj);
+            $("#text").text(snapshot.val().text);
+         }); 
+      });
+   </script>
+
+   <h1 id="subject">Send an email to inbound [at] ismaelc.bymail.in</h1>
+   <h3 id="text">Email content will show up here...</h3>
+</body>
+</html>
