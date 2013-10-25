@@ -12,7 +12,9 @@
       $(document).ready(function () {
          var audio = document.createElement("audio");
          if (audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg")) {
-            var myDataRef = new Firebase('https://voice.firebaseio.com/');
+
+            //TODO: Create your own Firebase at http://firebase.com/
+            var myDataRef = new Firebase('https://<your own firebase>.firebaseio.com/');
             myDataRef.on('child_added', function(snapshot) {
                audio.src = "data:audio/mp3;base64," + $.base64.encode(snapshot.val().voice);
                audio.play();
