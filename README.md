@@ -1,11 +1,6 @@
 ## SendGrid Parse API demo with Mashape and Firebase
 
-This node.js app uses SendGrid's [Inbound Parse API](http://sendgrid.com/docs/API_Reference/Webhooks/parse.html) 
-(Webhook) to pull an email's subject, which is then read out on a webpage.  
-It uses this Mashape 
-[text-to-speech](https://www.mashape.com/montanaflynn/text-to-speech#!documentation) 
-API to convert text to audio.  It also uses [Firebase](http://firebase.com) to store data and do a callback to the webpage to
-play the audio.
+This node.js app uses SendGrid's [Inbound Parse API](http://sendgrid.com/docs/API_Reference/Webhooks/parse.html) (Webhook) to pull an email's subject, which is then read out on a webpage.  It uses this Mashape [text-to-speech](https://www.mashape.com/montanaflynn/text-to-speech#!documentation) API to convert text to audio.  It also uses [Firebase](http://firebase.com) to store data and do a callback to the webpage to play the audio.
 
 ### Try the app
 
