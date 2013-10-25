@@ -1,5 +1,4 @@
 var unirest = require('unirest'),
-    fs      = require('fs'),
     Firebase= require('firebase'),
     config  = require('./config');
 
